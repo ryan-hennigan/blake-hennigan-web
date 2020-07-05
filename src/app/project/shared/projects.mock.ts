@@ -25,6 +25,26 @@ export const PROJECTS : Project[] = [
         style:"METATOP_DATABOT"
     },
     {
+        id: "1asdf1asdfafd1111asg",
+        name: "Hello!",
+        description: "Hello, my name is Blake Hennigan. I am a 3D layout artist looking for work in feature films and commercials. I am inspired by visual storytelling and devote my craft to the immense amount of movies I watch and making short films with my peers in my free time. I love to learn and keep up to date with new software’s. I am well versed in all aspects of the animation pipeline and use my knowledge of directing and editing to create digital media.\
+        \n\n\nThanks for taking the time to read my page.",
+        tag: "AboutMe",
+        accessTime:null,
+        imageData:{
+            images:[
+               "https://image.shutterstock.com/image-photo/studio-headshot-young-happy-european-260nw-1079314142.jpg"
+            ],
+            carsel:false
+        },
+        videoData:{
+            videos:[
+                
+            ]
+        },
+        style:"METALEFT_DATARIGHT"
+    },
+    {
         id: "1asasdf111asdfg",
         name: "dummy project 1",
         description: "this is dummy project one",

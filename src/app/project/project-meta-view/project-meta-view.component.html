@@ -1,4 +1,4 @@
-<div *ngIf="project" [routerLink]="['/projects',project.id]">
-    <h2 class="display-4">{{project.name}}</h2>
-    <h6 class="display-5">{{project.description}}</h6>
+<div *ngIf="project" [routerLink]="['/projects',project.id]" class="text-justified container">
+    <h2 class="display-3">{{project.name}}</h2>
+    <h6 class="h4 lead" style="white-space: pre-line">{{project.description}}</h6>
 </div>
