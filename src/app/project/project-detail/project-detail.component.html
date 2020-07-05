@@ -1,0 +1,18 @@
+<div *ngIf="project">
+  <!-- <h2 class="display-2 text-center">{{project.name}}</h2> -->
+  <a class="btn btn-outline-info" (click)="toggleAdmin()">Toggle Admin View</a>
+  <div *ngIf="admin" class="container">
+    <h2 class="display-2 text-center">Edit Project</h2>
+    <app-project-editor [project]="project"></app-project-editor>
+    <a class="btn btn-outline-success" (click)="save()">Save</a>
+    <button class="btn btn-outline-danger" (click)="delete()">Delete</button>
+  </div>
+  <div class="card text-center shadow-lg my-4 d-block" >
+    <app-project-styled-view [project]="project"></app-project-styled-view>
+    <a class="btn btn-primary" (click)="goBack()">go back</a>
+  </div>
+</div>
+
+
+
+

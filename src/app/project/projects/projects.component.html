@@ -1,0 +1,13 @@
+
+<div class="projects">
+    <h1 class="display-2" style="text-align:center;">Projects</h1>
+    <div class="createProject container my-4">
+        <h2 class="display-3 text-center">Create project</h2>
+        <app-project-editor [project]="newProject"></app-project-editor>
+        <a class="btn btn-outline-success mx-auto" (click)="save()">Save</a>
+    </div>
+
+    <app-project-list [projects]="projects"></app-project-list>
+</div>
+
+

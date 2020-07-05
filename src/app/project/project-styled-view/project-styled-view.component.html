@@ -1,0 +1,28 @@
+
+
+<div *ngIf="project.style==='METATOP_DATABOT'">
+    <app-project-meta-view [project]="project"></app-project-meta-view>
+    <app-project-data-view [id]="project.id" [imageData]="project.imageData" [videoData]="project.videoData"></app-project-data-view>
+</div>
+<div *ngIf="project.style==='METALEFT_DATARIGHT'">
+    <div class="row">
+        <div class="col-md-6">
+            <app-project-meta-view [project]="project"></app-project-meta-view>
+        </div>
+        <div class="col-md-6">
+            <app-project-data-view [id]="project.id" [imageData]="project.imageData" [videoData]="project.videoData"></app-project-data-view>
+        </div>
+    </div>
+</div>
+<div *ngIf="project.style==='METARIGHT_DATALEFT'">
+    <div class="row">
+        <div class="col-md-6">
+            <app-project-data-view [id]="project.id" [imageData]="project.imageData" [videoData]="project.videoData"></app-project-data-view>
+        </div>
+        <div class="col-md-6">
+            <app-project-meta-view [project]="project"></app-project-meta-view>
+        </div>
+    </div>
+</div>
+
+

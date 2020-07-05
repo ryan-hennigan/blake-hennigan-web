@@ -1,0 +1,72 @@
+<div class="container ">
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">Name</span>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="project.name" placeholder="name">
+    </div>
+
+    <div class="input-group mb-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Description</span>
+        </div>
+        <input type="text" class="form-control" [(ngModel)]="project.description" placeholder="description">
+      </div>
+
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Tag</span>
+      </div>
+      <input type="text" class="form-control" [(ngModel)]="project.tag" placeholder="tag">
+    </div>
+
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Style</span>
+      </div>
+      <select [(ngModel)]="project.style" class="form-control">
+        <option *ngFor="let c of styles" [ngValue]="c">{{c}}</option>
+      </select>
+    </div>
+
+    <div class="images-input mb-4">
+      <p class="display-4">Images</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" [(ngModel)]="project.imageData.carsel" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">
+          Carousel
+        </label>
+      </div>
+      <div *ngFor="let image of project.imageData.images; let i = index;" class="input-group mb-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Image:{{i+1}}</span>
+        </div>
+
+        <input type="text" class="form-control" [(ngModel)]="project.imageData.images[i]" placeholder="image">
+        <div class="input-group-append">
+          <button class="btn btn-danger" (click)="removeImage(i)">&times;</button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a class="btn btn-outline-success" (click)="addImage()">Add Image</a>
+    </div>
+
+    <div class="videos-input mb-4">
+      <p class="display-4">Videos</p>
+      <div *ngFor="let video of project.videoData.videos; let i = index;" class="input-group mb-4">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Video:{{i+1}}</span>
+        </div>
+
+        <input type="text" class="form-control" [(ngModel)]="project.videoData.videos[i]" placeholder="video">
+        <div class="input-group-append">
+          <button class="btn btn-danger" (click)="removeVideo(i)">&times;</button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <a class="btn btn-outline-success" (click)="addVideo()">Add Video</a>
+    </div>
+
+  </div>
